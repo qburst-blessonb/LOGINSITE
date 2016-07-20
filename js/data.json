@@ -1,0 +1,28 @@
+
+
+data = 	[	{
+			"Name":"Blesson Babu" , 
+			"username":"blessonbabu",
+			"email":"blesson@qburst.com",
+			"password":"8129162925",
+			"age":"23",
+			"Gender":"male",
+			"Address":"Thenguvila Veedu Ummannoor P.O Kottarakkara",
+			"Nationality":"Indian",
+			"Educational_Qualifications":{"10":"92","12":"94","UG":"80"},
+			"Performance":{"2010":"8","2011":"8","2012":"8","2013":"8","2014":"8","2015":"9","2016":"9"}
+			},
+			{
+			"Name":"Binson Babu",
+			"username":"binsonbabu",
+			"email":"binson@gmail.com",
+			"password":"8129658016",
+			"age":"27",
+			"Gender":"male",
+			"Address":"Thadativila Veedu Kottayam",
+			"Nationality":"Indian",
+			"Educational_Qualifications":{"10":"90","12":"92","UG":"82"},
+			"Performance":{"2010":"7","2011":"7","2012":"8","2013":"8","2014":"8","2015":"8","2016":"8"}
+			}
+		];
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<title>Register Page</title>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="login-page">
+	  <div class="form">
+	    <h3>Create an Account</h3>
+	      <form class="register-form" method="post" name="myform">
+	      	<label>Name:</label><input type="text" placeholder="Name" name="name" id="name"/><br>
+	        <label>User Name:</label><input type="text" placeholder="Username" name="uname" id="uname"/><br>
+	        	<div id="display1"></div>
+	        <label>Email:</label><input type="text" placeholder="Email" name="email" id="email"/><br>
+				<div id="display2"></div>
+	        <label>Password:</label><input type="password" placeholder="Password" name="psw" id="psw"/><br>
+				<div id="display3"></div>
+	        <label>Retype Password:</label><input type="password" placeholder="Retype password" name="psw1" id="psw1"/><br> 				
+	        	<div id="display4"></div><br>
+			<button type="button" name="Signup" id="button2">Sign Up</button>
+	        <p class="message">Already registered? <a href="login.html">Sign In</a></p>
+	      </form>
+	  </div>
+	</div>
+	<script type="text/javascript" src="js/data.json"></script>
+	<script src="js/signup.js"></script>
+</body>
+</html>

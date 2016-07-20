@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<title>Login Page</title>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+		<div class="login-page">
+    <div class="form">
+        <h3>Login to your Account check</h3>
+      	<form class="login-form" method="post" name="myform">
+        	<label>Username:</label><input type="text" placeholder="username or email" name="username" id="username" /><br>
+			<div id="display1"></div>
+        	<label>Password:</label><input type="password" placeholder="password" name="password" id="password" /><br>
+			<div id="display2"></div>
+			<div id="display"></div>
+			<button type="button" id="button1" name="Login">Login</button>
+        	<p class="message">Don't have an account? <a href="register.html">Sign Up</a></p>
+      	</form>
+    </div>
+	</div>
+<script src="js/login.js"></script>
+</body>
+</html>

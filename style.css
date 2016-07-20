@@ -1,0 +1,186 @@
+body {
+
+  font-family: all;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to left, #76b852, #8DC26F);
+  background-image: url("images/bkg1.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.register-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.container {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    padding:10px 0 10px 10px;
+}
+h3 {
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: -20px 0 30px 0;
+    color: brown;
+
+}
+
+h2 {
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: brown;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin: 200px 0 0 0;
+  color: brown;
+}
+td {
+  width: 20%;
+}
+
+#tenth,#plustwo {
+  margin-left:30px;
+  width:50%;
+  padding:0;
+}
+#ug {
+ width:50%;
+ margin-left: 22px; 
+ padding:0;
+}
+#slider1,#slider2,#slider3,#slider4,#slider5,#slider6,#slider7 {
+  width: 50%;
+  margin-left: 12px;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background-image: url("images/bkg6.jpg");
+  background-position: all;
+  max-width: 380px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input[type="text"],input[type="password"],input[type="number"]{
+  font-family: Arial, Helvetica, sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 70%;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 4px;
+  border: solid 1px #dcdcdc;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+}
+
+.form button {
+  font-family: all;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: none;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.form button:hover, .form button:active, .form button:focus {
+  background: #43A047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #008B8B;
+  font-size: 16px;
+  text-align: center;
+}
+.form .message a {
+  color: #FF6347;
+  text-decoration: none;
+}
+.form .message1 {
+  float:right;
+  font-size: 12px;
+  margin-top: auto;
+}
+.form .message1 a {
+  text-decoration: none;
+}
+label {
+  float: left;
+  width: 80px;
+  padding-top: 12px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+}
+
+.logout button {
+  font-family: all;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 10%;
+  border: none;
+  margin-left: 1100px;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+#display {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  font-size: 14px;
+  font font-family: "Times New Roman", Times, serif;
+  margin-bottom: 10px;
+}
+
+#display1,#display2,#display3,#display4 {
+  color:red;
+  font-weight: bold;
+  font-size: 12px;
+  font font-family: "Times New Roman", Times, serif;
+  width: 70%;
+  margin-left: 80px;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 750px) {
+  label {
+    margin-left: 35%;
+  }
+  .form input {
+      width: 100%;
+      margin-top: 10px;
+      margin-left: auto;
+      text-align: center;
+  }
+  #display1,#display2,#dispaly3,#display4 {
+    margin: auto;
+    text-align: center;
+  }
+}
