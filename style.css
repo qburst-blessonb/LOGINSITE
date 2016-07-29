@@ -27,6 +27,12 @@ body {
     color: black;
     padding:10px 0 10px 10px;
 }
+.container1 {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: black;
+    padding:10px 0 10px 10px;
+}
 h3 {
     font-family: sans-serif;
     font-weight: bold;
@@ -61,7 +67,7 @@ td {
 }
 #ug {
  width:50%;
- margin-left: 22px; 
+ margin-left: 22px;
  padding:0;
 }
 #slider1,#slider2,#slider3,#slider4,#slider5,#slider6,#slider7 {
@@ -169,6 +175,21 @@ label {
   margin-left: 80px;
   margin-bottom: 10px;
 }
+.wrapper {
+     width: 1005px;
+     margin: 0 auto;
+}
+.left, .right {
+    float: left;
+    min-height: 450px;
+}
+.left {
+     width: 250px;
+}
+.right {
+     width: 750px;
+}
+
 @media only screen and (max-width: 750px) {
   label {
     margin-left: 35%;
