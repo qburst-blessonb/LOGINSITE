@@ -62,50 +62,86 @@ $(document).ready(function(){
 
 
 						var w = 500;
-		        var h = 200;
-		        var barPadding = 1;
-		        //Create SVG element
-		        var svg = d3.select("#display1")
-		                    .append("svg")
-		                    .attr("width", w)
-		                    .attr("height", h);
-		        svg.selectAll("rect")
-		           .data(dataset)
-		           .enter()
-		           .append("rect")
-		           .attr("x", function(d,i) {
-		              return i * (w / dataset.length);  //Bar width of 20 plus 1 for padding
-		            })
-		            .attr("y", function(d) {
-		              return h-(d*12);  //Height minus data value
-		            })
-								.attr("width",24)//- barPadding
-		           .attr("height", function(d) {
-		              return d * 12;
-		            })
-		            .attr("fill","red");
+				        var h = 200;
+				        var barPadding = 1;
+						var widthScale = d3.scale.linear()
+											.domain([0,10])
+											.range([0,h]);	
+						var color = d3.scale.linear()
+										.domain([0,10])
+										.range(["red","blue"]);
+						var axis = d3.svg.axis()
+										.scale(widthScale);
+		        		var svg = d3.select("#display1")
+				                    .append("svg")
+				                    .attr("width", w)
+				                    .attr("height", h);
 
-								svg.selectAll("text")
-		               .data(dataset)
-		               .enter()
-		               .append("text")
-		               .text(function(d) {
-		                       return d;
-		                  })
-		                .attr("x", function(d,i) {
-		                    return i * (w / dataset.length) + ((dataset.length-barPadding)*2);
-		                })
-		               .attr("y", function(d) {
-		                    return h - (d * 12)+14;
-		               })
-		              .attr("font-family", "sans-serif")
-		              .attr("font-size", "11px")
-		              .attr("fill", "white")
-		              .attr("text-anchor", "middle");
+				        var xScale = d3.time.scale()
+				        	.domain([2010,2016])
+				        	.range([0,h]);
 
-//console.log("i value: "+i);
+				        var yAxis = d3.svg.axis()
+				        	.orient("left")
+				        	.scale(widthScale);
+
+						var xAxis = d3.svg.axis()
+				        	.orient("bottom")
+				        	.ticks(6)
+
+				        	.scale(xScale);
+
+				        svg.append("g")
+				        	.attr("transform","translate(1,0)")
+				        	.call(yAxis);
+				        svg.append("g")
+				        	.attr("class","xaxis")
+				        	.attr("transform","translate(0,199)")
+				        	.call(xAxis);
+				        svg.selectAll(".xaxis text")
+				        	.attr("transform",function(d) {
+				        		return "translate(" + this.getBBox().height*-2 + "," + this.getBBox().height + ")rotate(-45)";
+				        	});
+
+				      
+
+				        svg.selectAll("rect")
+				           .data(dataset)
+				           .enter()
+				           .append("rect")
+				           .attr("x", function(d,i) {
+				              return (i * (w / dataset.length))+1;  //Bar width of 20 plus 1 for padding
+				            })
+				            .attr("y", function(d) {
+				              return (h-(d*12));  //Height minus data value
+				            })
+										.attr("width",24)//- barPadding
+				           .attr("height", function(d) {
+				              return widthScale(d);
+				            })
+				            .attr("fill",function(d) {
+					              return color(d);
+					        });
+						
+						svg.selectAll("text")
+			               .data(dataset)
+			               .enter()
+			               .append("text")
+			               .text(function(d) {
+			                       return d;
+		                   })
+			               .attr("x", function(d,i) {
+			                    return i * (w / dataset.length) + ((dataset.length-barPadding)*2);
+			               })
+			               .attr("y", function(d) {
+			                    return h - (d * 12)+14;
+			               })
+			               .attr("font-family", "sans-serif")
+			               .attr("font-size", "11px")
+			               .attr("fill", "white")
+			               .attr("text-anchor", "middle");
+						}
 					}
-				}
 
-});
+		});
 });
