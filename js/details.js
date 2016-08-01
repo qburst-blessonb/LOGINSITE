@@ -40,6 +40,8 @@ $(document).ready(function(){
 			}
 		});
 		$('#myForm2 input').on('change', function() {
+				$( "#display1" ).remove();
+				$( ".right" ).append( "<div id='display1'></div>" );
 				$("svg").find("*").remove();
 				var dispname = $('input[name="userdetails"]:checked', '#myForm2').val();
 				var count = localStorage.length;
@@ -49,7 +51,6 @@ $(document).ready(function(){
 					var accdet = localStorage.getItem(keyvalue);
 					account = JSON.parse(accdet);
 					if(dispname==account.Name) {
-  //          var i=0;
 						var dataset = [];
 						dataset.push(account.Performance[2010]);
 						dataset.push(account.Performance[2011]);
@@ -64,7 +65,7 @@ $(document).ready(function(){
 		        var h = 200;
 		        var barPadding = 1;
 		        //Create SVG element
-		        var svg = d3.select("body")
+		        var svg = d3.select("#display1")
 		                    .append("svg")
 		                    .attr("width", w)
 		                    .attr("height", h);
@@ -78,7 +79,7 @@ $(document).ready(function(){
 		            .attr("y", function(d) {
 		              return h-(d*12);  //Height minus data value
 		            })
-								.attr("width",24)//- barPadding)
+								.attr("width",24)//- barPadding
 		           .attr("height", function(d) {
 		              return d * 12;
 		            })
@@ -105,5 +106,6 @@ $(document).ready(function(){
 //console.log("i value: "+i);
 					}
 				}
+
 });
 });
